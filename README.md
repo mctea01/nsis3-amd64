@@ -1,6 +1,7 @@
 # NSIS
 
 [![Build, Test and Publish](https://github.com/kichik/nsis/actions/workflows/build.yml/badge.svg)](https://github.com/kichik/nsis/actions/workflows/build.yml) [![Copy from SourceForge Subversion](https://github.com/kichik/nsis/actions/workflows/copy-svn.yml/badge.svg)](https://github.com/kichik/nsis/actions/workflows/copy-svn.yml)
+(註:官方編譯)
 
 NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers. It is designed to be as small and flexible as possible and is therefore very suitable for internet distribution.
 
