@@ -160,7 +160,7 @@ CEXEBuild::CEXEBuild(signed char pponly, bool warnaserror) :
 
   // Added by Amir Szekely 31st July 2002
 #ifdef NSIS_CONFIG_COMPRESSION_SUPPORT
-  compressor = &zlib_compressor;
+  compressor = &lzma_compressor;
 #endif
   build_compressor_set = false;
   build_compressor_final = false;
@@ -426,7 +426,7 @@ void CEXEBuild::initialize(const TCHAR *makensis_path)
   stubs_dir = nsis_dir;
   stubs_dir += PLATFORM_PATH_SEPARATOR_STR _T("Stubs");
 
-  if (set_compressor(_T("zlib"), false) != PS_OK || set_target_architecture_data() != PS_OK)
+  if (set_compressor(_T("lzma"), false) != PS_OK || set_target_architecture_data() != PS_OK)
   {
     throw runtime_error("error setting default stub");
   }

@@ -76,26 +76,26 @@
 
 #ifdef EXEHEAD
   #ifdef NSIS_CONFIG_COMPRESSION_SUPPORT
-    #ifndef NSIS_COMPRESS_USE_ZLIB
+    #ifndef NSIS_COMPRESS_USE_LZMA
       #ifndef NSIS_COMPRESS_USE_BZIP2
-        #ifndef NSIS_COMPRESS_USE_LZMA
+        #ifndef NSIS_COMPRESS_USE_ZLIB
           #error compression is enabled but zlib, bzip2 and lzma are disabled.
         #endif
       #endif
     #endif
   #endif
 
-  #ifdef NSIS_COMPRESS_USE_ZLIB
+  #ifdef NSIS_COMPRESS_USE_LZMA
     #ifdef NSIS_COMPRESS_USE_BZIP2
-      #error both zlib and bzip2 are enabled.
+      #error both lzma and bzip2 are enabled.
     #endif
-    #ifdef NSIS_COMPRESS_USE_LZMA
-      #error both zlib and lzma are enabled.
+    #ifdef NSIS_COMPRESS_USE_ZLIB
+      #error both lzma and zlib are enabled.
     #endif
   #endif
-  #ifdef NSIS_COMPRESS_USE_BZIP2
-    #ifdef NSIS_COMPRESS_USE_LZMA
-      #error both bzip2 and lzma are enabled.
+  #ifdef NSIS_COMPRESS_USE_LZMA
+    #ifdef NSIS_COMPRESS_USE_BZIP2
+      #error both lzma and bzip2 are enabled.
     #endif
   #endif
 

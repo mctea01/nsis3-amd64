@@ -1,0 +1,5 @@
+nsis-*/
+build/
+config.log
+.sconf_temp
+.sconsign.dblite

@@ -5,6 +5,10 @@
 
 NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers. It is designed to be as small and flexible as possible and is therefore very suitable for internet distribution.
 
+### 此般本修正
+   * 針對在Windows MSVCRT 使用Clang-CL編譯進行修正
+   * 修改預設壓縮方法為lzma
+
 ## External Links
 
    * [Simple tutorial](https://nsis.sourceforge.io/Simple_tutorials)

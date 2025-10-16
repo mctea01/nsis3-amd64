@@ -2435,11 +2435,11 @@ int CEXEBuild::doCommand(int which_token, LineParser &line)
         PRINTHELP();
       }
 
-      int k=line.gettoken_enum(a, _T("zlib\0bzip2\0lzma\0"));
+      int k=line.gettoken_enum(a, _T("lzma\0zlib\0bzip2\0"));
       switch (k) {
-        case 0: compressor = &zlib_compressor; break;
+        case 0: compressor = &lzma_compressor; break;
         case 1: compressor = &bzip2_compressor; break;
-        case 2: compressor = &lzma_compressor; break;
+        case 2: compressor = &zlib_compressor; break;
         default: PRINTHELP();
       }
 
